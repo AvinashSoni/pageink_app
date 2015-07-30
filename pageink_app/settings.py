@@ -56,7 +56,7 @@ ROOT_URLCONF = 'pageink_app.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'template')],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -70,7 +70,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'pageink_app.wsgi.application'
-
+TEMPLATE_DIRS = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'template')
 
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
