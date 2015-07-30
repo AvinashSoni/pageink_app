@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+	<title> MY First Website : Appinks</title>
+	<meta charset ="utf-8" />
+
+	<link rel="stylesheet" href="/static/css/styles.css" type="text/css"/>
+	<meta name=:viewport content = "width-device-device, initial-scale=1.0">
+	
+</head>
+
+<body class="body">
+	<header class="mainHead">
+		<img src="/static/img/mainlogo.png" width="100" heigth="144">
+		<h1>Appinks</h1>
+		<nav><ul>
+			<li class = 'active'><a href="#">Home</a></li>
+			<li ><a href="#">Blog</a></li>
+			<li ><a href="#">Archives</a></li>
+			<li ><a href="#">Latestnews</a></li>
+		</ul></nav>
+	</header>
+
+	<aside class="sideInfo">
+		<article>
+			<h3>Recent News</h3>
+			{% for post in object_list %}
+			<p>{{ post.date|date:"Y-m-d" }}<a href="/blog/{{post.id}}"> {{ post.title }}</a></p>
+			{% endfor %}
+		</article>
+	</aside>
+<div class="mainBody">
+    <p>
+
+    {% block body %}
+
+ 
+    {% endblock %}
+    </p>
+</div>
+    <footer class="mainFooter">
+		<p> Copyright@ Pageink ePortals Pvt Ltd </p>
+	</footer>
+
+</body>
+</html>
