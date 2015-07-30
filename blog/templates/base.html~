@@ -32,7 +32,7 @@
 <div class="mainBody">
     <p>
 
-    {% block body %}
+    {% block content %}
 
  
     {% endblock %}
